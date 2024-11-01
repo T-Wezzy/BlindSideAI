@@ -1,0 +1,5 @@
+scikit-learn
+pyautogui
+easyocr
+opencv-python
+numpy
