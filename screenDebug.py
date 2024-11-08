@@ -1,16 +1,20 @@
 import pyautogui
 import keyboard
+import time
 
 def mousePos():
     mouseX, mouseY = pyautogui.position()
     return "Mouse Posistion: (" + str(mouseX) + ", " + str(mouseY) + ")"
 
+running = True
+loops = 1
 
-
-while True:
+while loops >= 0:
     try:
         if keyboard.is_pressed('space'):
             print(mousePos())
-            break
+            time.sleep(0.2)
+            loops -= 1
+            continue
     except:
-        break
+        continue   

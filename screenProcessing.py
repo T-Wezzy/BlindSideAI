@@ -47,7 +47,8 @@ def textFromImage(startRow, startColumn, width, height, debugMode):
         # print(i)
         boundBox, text_, score = i
         print("Text: " + text_ + " Probability: " + str(score))
-        return text_
+    
+    return text
 
 def updateJSON():
     with open('data\\gameStorage.json', 'w') as file:
@@ -55,9 +56,9 @@ def updateJSON():
             "gameStats": {
                 "hands": 4,
                 "discards": 3,
-                "money": "money",
+                "money": "money :D",
                 "blind": blind,
-                "chips": chips,
+                "chips": "not a feature rn... working on it",
                 "hand_size": int(handData[0])
             }
         }
@@ -72,14 +73,17 @@ screenshot("screenshots\\fullscreenShot.jpg")
 
 # screenshot("screenshots\\handShot.png", 1000, 862, 90, 27)
 
-blind = textFromImage(82, 80, 490, 145, True)
+blind = textFromImage(82, 80, 490, 145, False)
 
-chips = str(textFromImage())
+# chips = str(textFromImage())
 
-handData = str(textFromImage())
+handData = textFromImage(1021, 864, 1073, 884, False) # 1021, 864, 1073, 884
+for i in handData:
+    handD_bound, handD_text, handD_score = i
+    handData = handD_text
 handData = handData.split("/")
 
-#print(handData)
+print(handData)
 
 # if chips.find(','):
 #     chips = chips.replace(',', '')
