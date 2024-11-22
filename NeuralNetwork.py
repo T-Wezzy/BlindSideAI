@@ -1,12 +1,12 @@
 import numpy as np
-
+import time
 
 class NeuralNetwork:
     
 
     def __init__(self):
         
-        np.random.seed(np.random.randint(1,100))
+        np.random.seed(1)
 
         self.synaptic_weights = 2 * np.random.random((13,1)) - 1
 
@@ -70,30 +70,25 @@ if __name__ == "__main__":
     
     training_outputs = np.array([[0,1,0,0,0,0,0,0,1,0,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,0]]).T
 
-    neural_network.train(training_inputs, training_outputs, 50000)
+    neural_network.train(training_inputs, training_outputs, 10000)
 
     print("Synaptic Weights After Training:")
     print(neural_network.synaptic_weights)
-    
-    running = True
 
-    while running:
+    Ace = int(input("Ace? "))
+    King = int(input("King? "))
+    Queen = int(input("Queen? "))
+    Jack = int(input("Jack? "))
+    Ten = int(input("Ten? "))
+    Nine = int(input("Nine? "))
+    Eight = int(input("Eight? "))
+    Seven = int(input("Seven? "))
+    Six = int(input("Six? "))
+    Five = int(input("Five? "))
+    Four = int(input("Four? "))
+    Three = int(input("Three? "))
+    Two = int(input("Two? "))
 
-        Ace = str(input("Ace? "))
-        King = str(input("King? "))
-        Queen = str(input("Queen? "))
-        Jack = str(input("Jack? "))
-        Ten = str(input("Ten? "))
-        Nine = str(input("Nine? "))
-        Eight = str(input("Eight? "))
-        Seven = str(input("Seven? "))
-        Six = str(input("Six? "))
-        Five = str(input("Five? "))
-        Four = str(input("Four? "))
-        Three = str(input("Three? "))
-        Two = str(input("Two? "))
-
-        print("New Input Data = ", Ace, King, Queen, Jack, Ten, Nine, Eight, Seven, Six, Five, Four, Three, Two)
-        print("Output Data: ")
-        print(neural_network.think(np.array([Ace, King, Queen, Jack, Ten, Nine, Eight, Seven, Six, Five, Four, Three, Two])))
-        running = str(input("Again? "))
+    print("New Input Data = ", Ace, King, Queen, Jack, Ten, Nine, Eight, Seven, Six, Five, Four, Three, Two)
+    print("Output Data: ")
+    print(neural_network.think(np.array([Ace, King, Queen, Jack, Ten, Nine, Eight, Seven, Six, Five, Four, Three, Two])))

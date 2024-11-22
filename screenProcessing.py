@@ -9,6 +9,8 @@ from PIL import Image
 
 from matplotlib import pyplot as plt
 
+import played_hand
+
 
 
 
@@ -78,12 +80,13 @@ blind = textFromImage(82, 80, 490, 145, False)
 # chips = str(textFromImage())
 
 handData = textFromImage(1021, 864, 1073, 884, False) # 1021, 864, 1073, 884
-for i in handData:
-    handD_bound, handD_text, handD_score = i
-    handData = handD_text
-handData = handData.split("/")
 
-print(handData)
+
+print(handData[0])
+
+playedHand = played_hand.PlayedHand(["A", "K", "Q", "J", "9", "8", "2", "2"], [""])
+
+playedHand.printLogicalResponse()
 
 # if chips.find(','):
 #     chips = chips.replace(',', '')
