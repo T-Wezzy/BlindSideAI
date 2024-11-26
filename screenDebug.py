@@ -2,7 +2,7 @@ import pyautogui
 import keyboard
 import time
 
-import played_hand
+import HandLogic
 
 def mousePos():
     mouseX, mouseY = pyautogui.position()

@@ -36,5 +36,5 @@ class PlayedHand:
             return True
         else:
             return False
-    
+
     # def flush(self):
